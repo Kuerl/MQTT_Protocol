@@ -36,6 +36,7 @@ public class Pub {
         pubConnOpts = new MqttConnectOptions();
         pubConnOpts.setCleanSession(true);
         // put the connection Alert here!
+        System.out.println("------------------------------------------");
         System.out.println("Create the connection");
         // connect method
         pubClient.connect(pubConnOpts);
@@ -46,11 +47,11 @@ public class Pub {
         pubMessage.setQos(2);
         pubClient.publish(pubTopic, pubMessage);
         // put the published Alert here!
-        System.out.println("Message is published, pubTopic: "+pubTopic);
+        System.out.println("Message is published, pubTopic: "+pubTopic+", content: "+pubMsg);
         // disconnect the broker
         pubClient.disconnect();
         // put the disconnected Alert here!
         System.out.println("Disconnected to the broker");
-        System.exit(0);
+//        System.exit(0);
     }
 }

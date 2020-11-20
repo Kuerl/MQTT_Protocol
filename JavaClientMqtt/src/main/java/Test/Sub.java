@@ -61,6 +61,8 @@ public class Sub {
             // put the published Alert here!
             System.out.println("Received message, subTopic: "+subTopic);
             System.out.println(subTopic+"\t"+mqttMessage);
+            // put the exit Alert!
+            System.out.println("Exit the Sub function");
             System.exit(0);
         }
 
