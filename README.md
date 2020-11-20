@@ -1,3 +1,11 @@
 ﻿Build MQTT protocol by Java and ReactNative!
  --------------------------------------------------
- The JavaApp use paho esclipe library
+ 
+ Set up broker:
+ --------------------------------------------------
+ The 
+ 
+ Java App Client:
+ --------------------------------------------------
+ Mobile Client:
+ --------------------------------------------------
