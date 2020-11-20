@@ -38,9 +38,13 @@ public class Sub {
         subCallBack = new CallBack();
         // .setCallback
         subClient.setCallback(subCallBack);
+        // put the connection Alert here!
+        System.out.println("Create the connection");
         // IMqttToken
         IMqttToken subToken = subClient.connect();
-        subToken.waitForCompletion(1000);
+        // put the connected Alert here!
+        System.out.println("Connected to the broker");
+        subToken.waitForCompletion();
         // subscribe topic and use QoS: 0
         subClient.subscribe(subTopic, 0);
     }
@@ -53,8 +57,12 @@ public class Sub {
         }
 
         @Override
-        public void messageArrived(String s, MqttMessage mqttMessage) throws Exception {
-            System.out.println(s+"\t"+mqttMessage);
+        public void messageArrived(String subTopic, MqttMessage mqttMessage) throws Exception {
+            // put the published Alert here!
+            System.out.println("Received message, subTopic: "+subTopic);
+            System.out.println(subTopic+"\t"+mqttMessage);
+            // put the exit Alert!
+            System.out.println("Exit the Sub function");
             System.exit(0);
         }
 
