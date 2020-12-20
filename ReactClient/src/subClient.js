@@ -1,4 +1,4 @@
-const MQTT_TOPIC_HOST = 'tcp://hcmiuiot.tech:1883';
+const MQTT_TOPIC_HOST = 'ws://hcmiuiot.tech:1883';
 
 import mqtt from 'mqtt/dist/mqtt';
 
