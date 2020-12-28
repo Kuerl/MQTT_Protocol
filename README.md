@@ -49,3 +49,6 @@ Add this code to main class => testPubClient.pubCore() publish message to topic:
 
 ## Notice:
 Broker: "tcp://hcmiuiot.tech:1883" belongs to HCMIU - IOT club.
+
+## React Native update:
+Just sub, pub at hcmiuiotclub github :vv
